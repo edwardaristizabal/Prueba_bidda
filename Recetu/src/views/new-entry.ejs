@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') %>
+    <title>Crear de Recetas</title>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+    <div class="conta p-4">
+        <form method="POST" action="/new-entry" class="card card-body">
+            <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Ingrese el título de la receta" autofocus required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <input type="text" class="form-control" name="description" id="description" placeholder="Ingrese la descripción para la receta" required>
+            </div>
+            <div class="form-group">
+                <label for="preparation">Preparación</label>
+                <input type="text" class="form-control" name="preparation" id="preparation" placeholder="Ingrese el proceso de preparación" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredientes</label>
+                <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Ingrese cada uno de los ingredientes" required>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notas del Creador</label>
+                <textarea name="notes" id="notes" rows="2" class="form-control" placeholder="Ingrese las notas que desee" required></textarea>
+            </div>
+                <div class="form">
+                    <div class="form-group">
+                        <label for="image">Imágen</label>
+                        <input type="text" class="form-control" name="image" id="" placeholder="https://website.com" required>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Grabar Receta" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

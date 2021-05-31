@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header') %>
+    <title>Inicio</title>
+  </head>
+  <body>
+    <%- include('partials/navigation') %>
+    <div class="container p-4">
+      <div class="row">
+        <% recetas.forEach(function(recetas){ %>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <p><%= recetas.title %></p>
+            </div>
+            <img src="<%= recetas.image %>" class="card-image-top">
+            <div class="card-body">
+              <p><%= recetas.description %></p>
+            </div>
+            <div class="card-footer">
+                <a href="/delete/<%= recetas.id %>" class="btn btn-danger">
+                    Eliminar
+                </a>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>
